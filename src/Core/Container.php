@@ -2,6 +2,8 @@
 
 namespace App\Core;
 
+use App\Home\HomeController;
+use App\Home\HomeRepository;
 use App\User\LoginService;
 use App\User\UserRepository;
 use App\User\UserController;
@@ -30,6 +32,14 @@ class Container{
             'userRepository' => function () {
                 return new UserRepository($this->make("pdo"));
             },
+
+            'homeController' => function(){
+                return new HomeController($this->make('homeRepository'));
+            },
+            'homeRepository' => function () {
+                return new HomeRepository($this->make("pdo"));
+            },
+
             'pdo' => function () {
                 $pdo = new PDO('mysql:host=localhost;dbname=wehoop;charset=utf8', 'wehoop', 'geheim');
                 $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

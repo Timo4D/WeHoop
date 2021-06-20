@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a13596-2220-4453-a2c8-50da9e0931ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/WeHoop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autoloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elements/html/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elements/html/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/elements/navbar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/AbstractController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/AbstractModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/AbstractRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Container.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/LoginService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/UserModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/init.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/loginuser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/HomeModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home/HomeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/home/start.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elements/html/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/elements/html/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elements/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/elements/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Container.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Container.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +58,7 @@
       <workItem from="1624099319645" duration="2128000" />
       <workItem from="1624132788586" duration="453000" />
       <workItem from="1624176560695" duration="1644000" />
-      <workItem from="1624200541537" duration="412000" />
+      <workItem from="1624200541537" duration="2452000" />
     </task>
     <servers />
   </component>

@@ -63,7 +63,7 @@ class UserController extends AbstractController {
             $password = $_POST['password'];
 
             if ($this->loginService->attemptLogin($username, $password)){
-                echo "jojo";
+                header("Location: index/home");
                 return;
             }else {
                 $notice = "Username und Passwort stimmen nicht überein";

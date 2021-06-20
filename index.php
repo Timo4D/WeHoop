@@ -13,31 +13,68 @@ $pathinfo =  $_SERVER['PATH_INFO'];
 
 //$pathinfo = $_SERVER['PATH_INFO'];
 
+if(!empty($_SESSION['username'])) {
+    $routes = [
+        '/index' => [
+            'controller' => 'homeController',
+            'method' => 'showStart'
+        ],
+        '/WeHoop/' => [
+            'controller' => 'homeController',
+            'method' => 'showStart'
+        ],
+        '/login' => [
+            'controller' => 'userController',
+            'method' => 'login'
+        ],
+        '/register' => [
+            'controller' => 'userController',
+            'method' => 'register'
+        ],
 
-$routes = [
-    '/index' => [
-        'controller' => 'userController',
-        'method' => 'login'
-    ],
-    '/WeHoop/' => [
-        'controller' => 'userController',
-        'method' => 'login'
-    ],
-    '/login' => [
-        'controller' => 'userController',
-        'method' => 'login'
-    ],
-    '/register' => [
-        'controller' => 'userController',
-        'method' => 'register'
-    ],
+        '/logout' => [
+            'controller' => 'userController',
+            'method' => 'logout'
+        ],
 
-    '/logout' => [
-        'controller' => 'userController',
-    '   method' => 'logout'
-    ],
+        '/home' => [
+            'controller' => 'homeController',
+            'method' => 'showStart'
+        ],
 
-];
+    ];
+} else {
+    $routes = [
+        '/index' => [
+            'controller' => 'userController',
+            'method' => 'login'
+        ],
+        '/WeHoop/' => [
+            'controller' => 'userController',
+            'method' => 'login'
+        ],
+        '/login' => [
+            'controller' => 'userController',
+            'method' => 'login'
+        ],
+        '/register' => [
+            'controller' => 'userController',
+            'method' => 'register'
+        ],
+
+        '/logout' => [
+            'controller' => 'userController',
+            '   method' => 'logout'
+        ],
+
+        '/home' => [
+            'controller' => 'homeController',
+            'method' => 'showStart'
+        ],
+
+    ];
+}
+
 
 if (isset($routes[$pathinfo])){
 $route = $routes[$pathinfo];
