@@ -48,7 +48,7 @@ abstract class AbstractRepository {
     }
 
 
-    function fetchAllBy( $id)
+    function fetchAllBy($id)
     {
 
         $table = $this->getTableName();

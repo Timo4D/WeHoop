@@ -23,7 +23,8 @@
                     <div class="card-header bg-primary"><h5>Gamecreator</h5></div>
                     <div class="card-body">
                         <p class="card-text">Ersatelle hier deine eigenen Spiele</p>
-                        <a href="/UdemyBlog/index/blogposts" class="btn btn-primary">Los gehts!</a>
+                        <a href="/WeHoop/index/creategame" class="btn btn-primary">Los gehts!</a>
+                        <a href="/WeHoop/index/searchgame" class="btn btn-primary">Spiel beitreten</a>
                     </div>
                 </div>
 
@@ -33,7 +34,7 @@
                     <div class="card-header"><h5>Wurftrainer</h5></div>
                     <div class="card-body">
                         <p class="card-text">Hier kannst du Trainieren</p>
-                        <a href="/UdemyBlog/index/login" class="btn btn-primary">Los gehts!</a>
+                        <a href="/UdemyBlog/index/creategame" class="btn btn-primary">Los gehts!</a>
                     </div>
                 </di>
             </div>

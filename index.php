@@ -42,6 +42,26 @@ if(!empty($_SESSION['username'])) {
             'method' => 'showStart'
         ],
 
+        '/creategame' => [
+            'controller' => 'gameController',
+            'method' => 'creategame'
+        ],
+
+        '/searchgame' => [
+            'controller' => 'gameController',
+            'method' => 'searchgame'
+        ],
+
+        '/submittgame' => [
+            'controller' => 'gameController',
+            'method' => 'submittgame'
+        ],
+
+        '/joingame' => [
+            'controller' => 'gameController',
+            'method' => 'joingame'
+        ],
+
     ];
 } else {
     $routes = [
@@ -70,6 +90,11 @@ if(!empty($_SESSION['username'])) {
         '/home' => [
             'controller' => 'homeController',
             'method' => 'showStart'
+        ],
+
+        '/creategame' => [
+            'controller' => 'gameController',
+            'method' => 'test'
         ],
 
     ];

@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a13596-2220-4453-a2c8-50da9e0931ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Home/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Home/HomeModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Home/HomeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/start.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Games/GameController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Games/GameModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Games/GameRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/games/creategame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/games/gamehistory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/games/joingame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/games/searchgame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/games/submittgame.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elements/html/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/elements/html/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elements/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/elements/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/AbstractRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/AbstractRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/Container.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Container.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/start.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/start.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +63,8 @@
       <workItem from="1624132788586" duration="453000" />
       <workItem from="1624176560695" duration="1644000" />
       <workItem from="1624200541537" duration="2452000" />
+      <workItem from="1624458333885" duration="7999000" />
+      <workItem from="1624514905709" duration="3955000" />
     </task>
     <servers />
   </component>

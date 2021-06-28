@@ -2,11 +2,15 @@
 
 namespace App\Core;
 
+use App\Games\GameController;
+use App\Games\GameRepository;
 use App\Home\HomeController;
 use App\Home\HomeRepository;
 use App\User\LoginService;
 use App\User\UserRepository;
 use App\User\UserController;
+use App\Games\GameService;
+use App\User\EloService;
 
 use PDO;
 
@@ -24,6 +28,14 @@ class Container{
                 return new LoginService($this->make('userRepository'));
             },
 
+            'gameService' => function() {
+                return new GameService($this->make('gameRepository'));
+            },
+
+            'eloService' => function() {
+                return new EloService($this->make('userRepository'));
+            },
+
 
 
             'userController' => function(){
@@ -39,6 +51,14 @@ class Container{
             'homeRepository' => function () {
                 return new HomeRepository($this->make("pdo"));
             },
+
+            'gameController' => function(){
+                return new GameController($this->make('gameRepository'),$this->make('userRepository'), $this->make('gameService'));
+            },
+            'gameRepository' => function () {
+                return new GameRepository($this->make("pdo"));
+            },
+
 
             'pdo' => function () {
                 $pdo = new PDO('mysql:host=localhost;dbname=wehoop;charset=utf8', 'wehoop', 'geheim');
