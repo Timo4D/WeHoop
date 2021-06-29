@@ -82,7 +82,7 @@ abstract class AbstractRepository {
     }
 
 
-    function fetchAllByUSERID( $userid)
+    function fetchAllByUSERID($userid)
     {
 
         $table = $this->getTableName();

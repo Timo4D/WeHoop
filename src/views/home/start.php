@@ -10,6 +10,8 @@
     <br>
     <div class="container">
         <h1>WILLKOMMEN BEI WEHOOP</h1>
+
+        <h4>Hallo <?php echo $username ?>, dein Elo ist <?php echo $elo?> </h4>
     </div>
     <br>
     <br>
@@ -22,7 +24,7 @@
                 <div class="card border-primary">
                     <div class="card-header bg-primary"><h5>Gamecreator</h5></div>
                     <div class="card-body">
-                        <p class="card-text">Ersatelle hier deine eigenen Spiele</p>
+                        <p class="card-text">Erstelle hier deine eigenen Spiele</p>
                         <a href="/WeHoop/index/creategame" class="btn btn-primary">Los gehts!</a>
                         <a href="/WeHoop/index/searchgame" class="btn btn-primary">Spiel beitreten</a>
                     </div>

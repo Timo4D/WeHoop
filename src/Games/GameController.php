@@ -4,13 +4,15 @@ namespace App\Games;
 
 use App\Core\AbstractController;
 use App\User\UserRepository;
+use App\User\EloService;
 
 class GameController extends AbstractController{
 
-    public function __construct(GameRepository $gameRepository, UserRepository $userRepository, GameService $gameService) {
+    public function __construct(GameRepository $gameRepository, UserRepository $userRepository, GameService $gameService, EloService $eloService) {
         $this->gameRepository = $gameRepository;
         $this->userRepository = $userRepository;
         $this->gameService = $gameService;
+        $this->eloService = $eloService;
     }
 
 
@@ -55,15 +57,23 @@ class GameController extends AbstractController{
         $game = $this->gameRepository->fetchOne($gameid);
         $userid = $this->userRepository->fetchAllByUSERNAME($_SESSION['username'])->userid;
 
-        $player1 = $this->userRepository->fetchAllByUserID($game->player1)->username;
-        $player2 = $this->userRepository->fetchAllByUserID($game->player2)->username;
+        $player1 = $this->userRepository->fetchAllByUserID($game->player1);
+        $player2 = $this->userRepository->fetchAllByUserID($game->player2);
 
         if($player1 != $player2) {
             if(!empty($_POST['score1']) AND !empty($_POST['score2'])) {
                 if($_POST['score1']<=21 OR $_POST['score2']<=21) {
                     if($_POST['score1']==21 xor $_POST['score2'] == 21) {
+                        
                         $this->gameService->validateGame($gameid, $userid, $_POST['score1'], $_POST['score2']);
+
+                        if($_POST['score1'] >= $_POST['score2']) {
+                            $this->eloService->applyElo($player1->userid, $player2->userid, $player1->userid);
+                        } else {
+                            $this->eloService->applyElo($player1->userid, $player2->userid, $player2->userid);
+                        }
                         header("Location: home");
+
                     } else {
                         $notice = "Bitte Spielt bis 21 / Es können gibt kein unentschiden";
                     }
@@ -81,9 +91,10 @@ class GameController extends AbstractController{
 
         $this->render("games/submittgame", [
             'gameid' => $game->gameid,
-            'player1' => $player1,
-            'player2' => $player2,
+            'player1' => $player1->username,
+            'player2' => $player2->username,
             'notice' => $notice
         ]);
     }
+
 }

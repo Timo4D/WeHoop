@@ -62,6 +62,11 @@ if(!empty($_SESSION['username'])) {
             'method' => 'joingame'
         ],
 
+        '/reviewgame' => [
+            'controller' => 'gameController',
+            'method' => 'reviewGame'
+        ],
+
     ];
 } else {
     $routes = [

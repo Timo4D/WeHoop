@@ -36,5 +36,12 @@ class UserRepository extends AbstractRepository {
         ]);
     }
 
+    public function updateElo($userID, $newElo) {
+        $table = $this->getTableName();
+        $statement = $this->pdo->prepare("UPDATE `$table` SET `elo` = '$newElo' WHERE `user`.`userid` = :userID;");
+        $statement->execute([
+            'userID' => $userID
+        ]);
+    }
 
 }

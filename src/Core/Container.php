@@ -46,14 +46,14 @@ class Container{
             },
 
             'homeController' => function(){
-                return new HomeController($this->make('homeRepository'));
+                return new HomeController($this->make('homeRepository'),$this->make('userRepository'));
             },
             'homeRepository' => function () {
                 return new HomeRepository($this->make("pdo"));
             },
 
             'gameController' => function(){
-                return new GameController($this->make('gameRepository'),$this->make('userRepository'), $this->make('gameService'));
+                return new GameController($this->make('gameRepository'),$this->make('userRepository'), $this->make('gameService'), $this->make('eloService'));
             },
             'gameRepository' => function () {
                 return new GameRepository($this->make("pdo"));
