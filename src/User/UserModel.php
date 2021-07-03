@@ -8,4 +8,5 @@ class UserModel extends AbstractModel {
     public $username;
     public $elo;
     public $password;
+    public $profile_pic;
 }

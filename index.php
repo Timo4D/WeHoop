@@ -42,6 +42,11 @@ if(!empty($_SESSION['username'])) {
             'method' => 'showStart'
         ],
 
+        '/WeHoop/home' => [
+            'controller' => 'homeController',
+            'method' => 'showStart'
+        ],
+
         '/creategame' => [
             'controller' => 'gameController',
             'method' => 'creategame'
@@ -65,6 +70,21 @@ if(!empty($_SESSION['username'])) {
         '/reviewgame' => [
             'controller' => 'gameController',
             'method' => 'reviewGame'
+        ],
+
+        '/WeHoop/uploadProfilePic' => [
+            'controller' => 'userController',
+            'method' => 'uploadProfilePic'
+        ],
+
+        '/uploadProfilePic' => [
+            'controller' => 'userController',
+            'method' => 'uploadProfilePic'
+        ],
+
+        '/WeHoop/profile' => [
+            'controller' => 'userController',
+            'method' => 'profile'
         ],
 
     ];

@@ -44,4 +44,12 @@ class UserRepository extends AbstractRepository {
         ]);
     }
 
+    public function updateProfilePic($userID, $file_name) {
+        $table = $this->getTableName();
+        $statement = $this->pdo->prepare("UPDATE `$table` SET `profile_pic` = '$file_name' WHERE `user`.`userid` = :userID;");
+        $statement->execute([
+            'userID' => $userID
+        ]);
+    }
+
 }

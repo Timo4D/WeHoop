@@ -39,7 +39,7 @@ class Container{
 
 
             'userController' => function(){
-                return new UserController($this->make('loginService'));
+                return new UserController($this->make('loginService'), $this->make('userRepository'));
             },
             'userRepository' => function () {
                 return new UserRepository($this->make("pdo"));
