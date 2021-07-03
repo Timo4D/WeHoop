@@ -11,6 +11,7 @@ use App\User\UserRepository;
 use App\User\UserController;
 use App\Games\GameService;
 use App\User\EloService;
+use App\Home\BugReportRepository;
 
 use PDO;
 
@@ -46,7 +47,7 @@ class Container{
             },
 
             'homeController' => function(){
-                return new HomeController($this->make('homeRepository'),$this->make('userRepository'));
+                return new HomeController($this->make('homeRepository'),$this->make('userRepository'),$this->make('bugReportRepository'));
             },
             'homeRepository' => function () {
                 return new HomeRepository($this->make("pdo"));
@@ -57,6 +58,10 @@ class Container{
             },
             'gameRepository' => function () {
                 return new GameRepository($this->make("pdo"));
+            },
+
+            'bugReportRepository' => function () {
+                return new BugReportRepository($this->make("pdo"));
             },
 
 

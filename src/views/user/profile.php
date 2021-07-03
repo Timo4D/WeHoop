@@ -94,13 +94,10 @@
                 </div>
                 </div>
             </div>
-
-
-
+            </div>
             </div>
         </div>
 
-        </div>
     </div>
 
 <form action="uploadProfilePic" method="post" enctype="multipart/form-data">

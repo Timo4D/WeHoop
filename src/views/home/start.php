@@ -42,7 +42,25 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div class="container">
+        <form method="POST">
+            <div class="row">
+                <div class="mb-3">
+                    <label for="reportABug" class="form-label">Report a Bug</label>
+                    <textarea class="form-control" id="reportABug" name="reportABug" rows="3"></textarea>
+                    <br>
+                    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+                    <p><?php echo $notice ?></p>
+                </div>
+            </div> 
+        </form>
 
+    </div>
 
 
 
